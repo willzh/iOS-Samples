@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fE2-GT-FpE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVb-DB-XaF">
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateQRCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cp0-tl-rfn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poF-nv-PqD">
+                                <state key="normal" title="Reader"/>
+                                <connections>
+                                    <action selector="readerQRCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwa-yJ-uyL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="poF-nv-PqD" firstAttribute="top" secondItem="JVb-DB-XaF" secondAttribute="bottom" constant="52" id="HQp-Fj-RQG"/>
+                            <constraint firstItem="poF-nv-PqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vp6-7V-h9Q"/>
+                            <constraint firstItem="JVb-DB-XaF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="ZeB-3j-RiN"/>
+                            <constraint firstItem="JVb-DB-XaF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bql-F6-GOv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QJI-Nn-icc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="487"/>
+        </scene>
+        <!--Code ReaderVC-->
+        <scene sceneID="9oH-34-ceO">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeReaderVC" id="IID-YX-2Ug" customClass="QRCodeReaderVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zIM-oZ-yOL"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fk-YI-ZZR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pBh-Tv-8Pe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-ws-IPp">
+                                <state key="normal" title="flash"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcT-fJ-MCs">
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GcT-fJ-MCs" firstAttribute="top" secondItem="zIM-oZ-yOL" secondAttribute="bottom" constant="8" id="4cP-V5-yAV"/>
+                            <constraint firstItem="ddJ-ws-IPp" firstAttribute="top" secondItem="zIM-oZ-yOL" secondAttribute="bottom" id="ioV-ww-kc1"/>
+                            <constraint firstItem="ddJ-ws-IPp" firstAttribute="leading" secondItem="pBh-Tv-8Pe" secondAttribute="leading" constant="16" id="rrR-3j-gI7"/>
+                            <constraint firstAttribute="trailing" secondItem="GcT-fJ-MCs" secondAttribute="trailing" constant="10" id="xNu-zc-Z9j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ev-sU-Le7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cSt-Ts-911">
+            <objects>
+                <navigationController id="fE2-GT-FpE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FvV-TV-nDa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gPc-qN-ocA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eja-ds-CJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="487"/>
+        </scene>
+    </scenes>
+</document>
